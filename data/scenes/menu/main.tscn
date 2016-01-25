@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://data/scripts/menu/main.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+
+margin/right = 40.0
+margin/bottom = 40.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 1 )
+__meta__ = { "__editor_plugin_screen__":"2D" }
+
+[node name="JoinServer" type="Button" parent="."]
+
+margin/left = 420.0
+margin/top = 170.0
+margin/right = 510.0
+margin/bottom = 200.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+text = "Join Server"
+flat = false
+
+[node name="ServerAddress" type="LineEdit" parent="."]
+
+margin/left = 360.0
+margin/top = 140.0
+margin/right = 570.0
+margin/bottom = 163.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+text = ""
+max_length = 0
+editable = true
+secret = false
+
+[node name="HostServer" type="Button" parent="."]
+
+margin/left = 420.0
+margin/top = 290.0
+margin/right = 510.0
+margin/bottom = 320.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+text = "Host Server"
+flat = false
+
+[connection signal="pressed" from="JoinServer" to="." method="_on_JoinServer_pressed"]
+
+[connection signal="text_changed" from="ServerAddress" to="." method="_on_ServerAddress_text_changed"]
+
+[connection signal="pressed" from="HostServer" to="." method="_on_HostServer_pressed"]
+
+

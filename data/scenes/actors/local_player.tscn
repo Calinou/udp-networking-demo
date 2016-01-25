@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://data/scenes/actors/player.tscn" type="PackedScene" id=1]
+
+[node name="Player" instance=ExtResource( 1 )]
+
+mode = 3
+
+[node name="Camera" parent="."]
+
+near = 0.1
+
+[node name="Camera1" parent="."]
+
+near = 0.1
+
+
